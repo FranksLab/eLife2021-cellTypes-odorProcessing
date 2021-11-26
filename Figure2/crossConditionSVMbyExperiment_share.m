@@ -11,11 +11,11 @@ KWIKfiles = T.kwikfile(logical(T.include) & strcmp(T.ROI,ROI));
 
 %% Params
 
-VOI = 2:6;
+VOI = 2:6; % valve 1 is mineral oil
 BinSize = .5;
 PST = [0 .5];
-trainTrials = 3:2:19;
-testTrials = 2:2:19;
+trainTrials = 3:2:19; % light-off trials
+testTrials = 2:2:19; % light-on trials
 Conc = 1;
 numIter = 50;
 

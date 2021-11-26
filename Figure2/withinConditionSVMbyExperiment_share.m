@@ -15,7 +15,8 @@ VOI = 2:6;
 BinSize = .5;
 PST = [0 .5];
 PST_pre = [-.6 -.1];
-Trials = 3:2:20;
+Trials = 3:2:19; % light-off trials
+% Trials = 2:2:20; % light-on trials
 Conc = 1;
 numIter = 50;
 

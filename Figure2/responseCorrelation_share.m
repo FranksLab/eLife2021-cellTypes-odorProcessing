@@ -13,8 +13,8 @@ KWIKfiles = T.kwikfile(logical(T.include) & strcmp(T.ROI,ROI));
 
 VOI = 2:6;
 Conc = 1;
-TrialSets{1} = 3:2:19;
-TrialSets{2} = 2:2:19;
+TrialSets{1} = 3:2:19; % light-off trials
+TrialSets{2} = 2:2:19; % light-on trials
 Cycle = 2; % first sniff
 
 %% Heatmap one column per conc, all odors
