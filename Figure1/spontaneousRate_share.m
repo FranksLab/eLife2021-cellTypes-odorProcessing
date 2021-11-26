@@ -5,7 +5,7 @@ clc
 %% Pick out recording files and put each in one cell
 
 ROI = {'SL'};
-Catalog = 'B:\Expt_Sets\catalog\ExperimentCatalog_Ntng.txt';
+Catalog = 'B:\Expt_Sets\catalog\ExperimentCatalog_Ntng.txt'; % set to data and catalog directory
 T = readtable(Catalog, 'Delimiter', ' ');
 ROIfiles = T.kwikfile(logical(T.include) & strcmp(T.ROI,ROI));
 
