@@ -13,11 +13,11 @@ KWIKfiles = T.kwikfile(logical(T.include) & strcmp(T.ROI,ROI));
 
 Params.PST = [0 .3];
 Params.KS = 0.01;
-Params.VOI = 2:6;
+Params.VOI = 2:6; % valve 1 is mineral oil blank stimulus
 Params.Conc = 1;
-Params.Cycle = 2;
-Trials{1} = 3:2:19;
-Trials{2} = 2:2:19;
+Params.Cycle = 2; % first sniff
+Trials{1} = 3:2:19; % light-off trial
+Trials{2} = 2:2:19; % light-on trials
 
 %% Heatmap one column per conc, all odors
 
