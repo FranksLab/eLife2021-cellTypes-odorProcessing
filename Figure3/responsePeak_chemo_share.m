@@ -4,8 +4,8 @@ clc
 
 %% Pick out recording files and put each in one cell
 
-ROI = {'E'};
-Catalog = 'B:\Expt_Sets\catalog\ExperimentCatalog_Ntng_Inh_Chemo.txt';
+ROI = {'E'}; % E: hm4di+CNO  C: mCherry+CNO  H: mCherry
+Catalog = 'B:\Expt_Sets\eLife2021_DryadData\ExperimentCatalog_Ntng_Inh_Chemo.txt';
 T = readtable(Catalog, 'Delimiter', ' ');
 KWIKfiles = T.kwikfile(logical(T.include) & strcmp(T.ROI,ROI));
 
@@ -13,7 +13,7 @@ KWIKfiles = T.kwikfile(logical(T.include) & strcmp(T.ROI,ROI));
 
 Params.PST = [0 .3];
 Params.KS = 0.01;
-Params.VOI = 2:7;
+Params.VOI = 2:7; % valve 1 is blank mineral oil
 Params.Conc = 1;
 Params.Cycle = 2;
 Trials{1} = 2:20;
@@ -94,7 +94,7 @@ errorbar(2,mean(cell2mat(mean_pk{2})),ci_LR{2}(1),ci_LR{2}(2),'kx')
 errorbar(3,mean(cell2mat(mean_pk_nLR{1})),ci_NLR{1}(1),ci_NLR{1}(2),'kx')
 errorbar(4,mean(cell2mat(mean_pk_nLR{2})),ci_NLR{2}(1),ci_NLR{2}(2),'kx')
 
-ylim([0 25])
+ylim([0 30])
 box off; axis square;
 
 for k = 1:length(KWIKfiles)

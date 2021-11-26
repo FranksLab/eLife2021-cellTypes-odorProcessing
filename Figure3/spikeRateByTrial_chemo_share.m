@@ -4,7 +4,7 @@ clc
 
 %% Pick out recording files and put each in one cell
 
-ROI = {'E'};
+ROI = {'E'}; % E: hm4di+CNO  C: mCherry+CNO  H: mCherry
 Catalog = 'B:\Expt_Sets\catalog\ExperimentCatalog_Ntng_Inh_Chemo.txt';
 T = readtable(Catalog, 'Delimiter', ' ');
 ROIfiles = T.kwikfile(logical(T.include) & strcmp(T.ROI,ROI));

@@ -4,17 +4,19 @@ clc
 
 %% Pick out recording files and put each in one cell
 
-ROI = {'E'};
-Catalog = 'B:\Expt_Sets\catalog\ExperimentCatalog_Ntng_Inh_Chemo.txt';
+ROI = {'E'}; % E: hm4di+CNO  C: mCherry+CNO  H: mCherry
+Catalog = 'B:\Expt_Sets\eLife2021_DryadData\ExperimentCatalog_Ntng_Inh_Chemo.txt';
 T = readtable(Catalog, 'Delimiter', ' ');
 KWIKfiles = T.kwikfile(logical(T.include) & strcmp(T.ROI,ROI));
 
 %% Params
 
-VOI = 2:7;
+VOI = 2:7; % valve 1 is blank mineral oil
 Conc = 1;
-TrialSets{1} = 2:20;
-TrialSets{2} = 41:59;
+TrialSets{1} = 2:20; % baseline
+TrialSets{2} = 41:59; % after CNO/C21
+% TrialSets{1} = 2:2:20; % control
+% TrialSets{2} = 3:2:20: % control
 Cycle = 2; % first sniff
 
 %% Heatmap one column per conc, all odors
