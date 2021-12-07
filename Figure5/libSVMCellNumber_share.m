@@ -18,7 +18,7 @@ PST_pre = [-.6 -.1];
 Trials = 2:11;
 Conc = 3;
 numPerm = 400;
-numIter = 10;
+numIter = 200;
 
 %% Rearrange data and run classifier
 
